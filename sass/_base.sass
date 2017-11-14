@@ -1,0 +1,50 @@
+*
+  box-sizing: border-box
+
+.row:before, .row:after
+  content: ""
+  display: table
+
+.row:after
+  clear: both
+
+[class*="col-"]
+  float: left
+  min-height: 1px
+  padding: 12px
+
+.container
+  width: 100%
+  max-width: 1170px
+  margin: 0 auto
+
+section
+  margin-top: em(50px)
+
+body
+  font-size: em(16px)
+  font-family: 'Open Sans', sans-serif
+  color: $font-black-color
+
+a
+  text-decoration: none
+  color: #FFFFFF
+
+h1
+  font-size: em(60px)
+  font-weight: 300
+  color: $font-white-color
+
+h2
+  margin-bottom: em(15px)
+  font-size: em(35px)
+  font-weight: 300
+  color: $font-black-color
+
+h3
+  color: $font-white-color
+p
+  font-size: em(14px)
+  line-height: em(24px)
+  font-weight: 400
+  color: $font-grey-color

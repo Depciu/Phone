@@ -1,0 +1,144 @@
+
+@mixin background-properties
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+
+@mixin jumbotron
+  height: 100vh
+  max-height: 800px
+  width: 100%
+  max-width: 1800px
+  margin: 0 auto
+
+.postion__relative
+  position: relative
+
+.position__absolute
+  position: absolute
+
+.adress
+  position: absolute
+  transform: rotate(-90deg)
+  top: 60%
+
+  p
+    font-size: em(8px)
+    font-weight: 600
+    letter-spacing: em(3px)
+    text-transform: uppercase
+    color: $font-white-color
+    span
+      margin-right: em(15px)
+      font-weight: 300
+
+/* header */
+
+.jumbotron1
+  position: relative
+  @include jumbotron
+  background-image: url("../images/image-1.jpg")
+  @include background-properties
+
+.logo
+  padding-top: em(60px)
+  img
+    height: 41px
+
+.jumbotron__title
+  position: absolute
+  top: 50%
+  width: em(500px)
+
+.jumbotron__title--p
+  margin-top: em(25px)
+  line-height: em(24px)
+  font-size: em(14px)
+  font-weight: 400
+  color: $font-white-color
+
+/* About */
+
+.tab
+  p
+    margin-top: em(24px)
+
+.tab-overlay
+  position: absolute
+  top: 32%
+  left: 50%
+  width: 100%
+  max-width: 585px
+  p
+    margin-top: em(24px)
+  img
+
+    height: auto
+    width: 100%
+    max-width: 561px
+    margin-bottom: 50px
+
+/* Gallery */
+#gallery
+  width: 100%
+  max-width: 1600px
+  margin: em(50px) auto 0 auto
+
+.photo__layer--link
+  display: inline-block
+
+
+.fa
+  color: $font-white-color
+
+.fa-heart-o
+  margin-left: em(150px)
+
+
+.photo
+  height: 200px
+  &__1
+    background-color: $background-pink-color
+  &__2
+    background-color: $background-dark_purple-color
+  &__3
+    background-image: url("../images/layer-6.jpg")
+    @include background-properties
+  &__4
+    background-color: $background-purple-color
+  &__5
+    background-image: url("../images/layer-6.jpg")
+    @include background-properties
+    .layer
+      .fa-heart-o
+        margin-left: em(480px)
+  &__6
+    background-color: $background-green-color
+  &__7
+    background-image: url("../images/layer-6.jpg")
+    @include background-properties
+
+.col-lg-1
+  width: 8.33%
+.col-lg-2
+  width: 16.66%
+.col-lg-3
+  width: 25%
+.col-lg-4
+  width: 33.33%
+.col-lg-5
+  width: 41.66%
+.col-lg-6
+  width: 50%
+.col-lg-7
+  width: 58.33%
+.col-lg-8
+  width: 66.66%
+.col-lg-9
+  width: 75%
+.col-lg-10
+  width: 83.33%
+.col-lg-11
+  width: 91.66%
+.col-lg-12
+  width: 100%
