@@ -71,7 +71,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #FFFFFF; }
+  color: #ffffff; }
 
 h1 {
   font-size: 3.75em;
@@ -101,7 +101,8 @@ p {
 
 .adress {
   position: absolute;
-  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
   top: 60%; }
   .adress p {
     font-size: 0.5em;
@@ -239,5 +240,3 @@ p {
 
 .col-lg-12 {
   width: 100%; }
-
-/*# sourceMappingURL=style.css.map */
