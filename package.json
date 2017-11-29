@@ -4,7 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run test:html",
+    "test:html": "glob-run nu-html-checker *.html",
+    "build": "npm run build:sass && npm run build:autoprefixer && npm run test",
+    "build:sass": "sass --sourcemap=none --update sass/style.sass:css/style.css",
+    "build:autoprefixer": "autoprefixer-cli css/style.css",
+    "update:sassprefixer": "npm run build:sass && npm run build:autoprefixer",
+    "watch": "parallelshell \"npm run watch:sassprefixer\" \"npm run watch:browser-sync\" ",
+    "watch:sassprefixer": "onchange sass/style.sass -- npm run update:sassprefixer",
+    "watch:browser-sync": "glob-run browser-sync start --server --files css/style.css, index.html"
   },
   "repository": {
     "type": "git",
@@ -15,5 +23,13 @@
   "bugs": {
     "url": "https://github.com/Depciu/Phone/issues"
   },
-  "homepage": "https://github.com/Depciu/Phone#readme"
+  "homepage": "https://github.com/Depciu/Phone#readme",
+  "dependencies": {
+    "autoprefixer-cli": "^1.0.0",
+    "browser-sync": "^2.18.13",
+    "glob-run": "^0.1.6",
+    "nu-html-checker": "^0.1.0",
+    "onchange": "^3.2.1",
+    "parallelshell": "^3.0.2"
+  }
 }
