@@ -23,13 +23,13 @@
   top: 60%
 
   p
-    font-size: em(8px)
+    @include font-size(8px)
     font-weight: 600
-    letter-spacing: em(3px)
+    letter-spacing: 0.1765rem
     text-transform: uppercase
     color: $font-white-color
     span
-      margin-right: em(15px)
+      margin-right: 10%
       font-weight: 300
 
 /* header */
@@ -41,19 +41,19 @@
   @include background-properties
 
 .logo
-  padding-top: em(60px)
+  padding-top: (60px)
   img
     height: 41px
 
 .jumbotron__title
   position: absolute
   top: 50%
-  width: em(500px)
+  width: 500px
 
 .jumbotron__title--p
-  margin-top: em(25px)
-  line-height: em(24px)
-  font-size: em(14px)
+  margin-top: 25px
+  line-height: 1.412rem
+  @include font-size(14px)
   font-weight: 400
   color: $font-white-color
 
@@ -61,7 +61,7 @@
 
 .tab
   p
-    margin-top: em(24px)
+    margin-top: 24px
 
 .tab-overlay
   position: absolute
@@ -70,7 +70,7 @@
   width: 100%
   max-width: 585px
   p
-    margin-top: em(24px)
+    margin-top: 24px
   img
 
     height: auto
@@ -82,7 +82,7 @@
 #gallery
   width: 100%
   max-width: 1600px
-  margin: em(50px) auto 0 auto
+  margin: 50px auto 0 auto
 
 .photo__layer--link
   display: inline-block
@@ -92,7 +92,7 @@
   color: $font-white-color
 
 .fa-heart-o
-  margin-left: em(150px)
+  margin-left: 150px
 
 
 .photo

@@ -1,7 +1,16 @@
+$base-font-size: 17px
 
-$browser-context: 16px
-@function em($pixels, $context: $browser-context)
-  @return #{$pixels/$context}em
+@function calculateRem($size)
+  $remSize: $size / $base-font-size
+  @return $remSize * 1rem
+
+@mixin font-size($size)
+  font-size: calculateRem($size)
+
+@mixin background-properties
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
 
 $font-black-color: #222626
 $font-grey-color: #959595

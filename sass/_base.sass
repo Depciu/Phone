@@ -21,29 +21,33 @@
 section
   margin-top: em(50px)
 
+html
+  font-size: $base-font-size
+
 body
-  font-size: em(16px)
+  @include font-size(17px)
   font-family: 'Open Sans', sans-serif
   color: $font-black-color
 
 a
   text-decoration: none
+  color: #ffffff
 
 h1
-  font-size: em(60px)
+  @include font-size(60px)
   font-weight: 300
   color: $font-white-color
 
 h2
-  margin-bottom: em(15px)
-  font-size: em(35px)
+  margin-bottom: 10%
+  @include font-size(35px)
   font-weight: 300
   color: $font-black-color
 
 h3
   color: $font-white-color
 p
-  font-size: em(14px)
-  line-height: em(24px)
+  @include font-size(14px)
+  line-height: 1.412rem
   font-weight: 400
   color: $font-grey-color
